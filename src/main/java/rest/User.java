@@ -60,14 +60,4 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
-
-    public static String getRandomEmail() {
-
-        return RandomStringUtils.randomAlphabetic(8) + "@mail.ru";
-    }
-
-    public static String getRandomData() {
-
-        return RandomStringUtils.randomAlphabetic(8);
-    }
 }

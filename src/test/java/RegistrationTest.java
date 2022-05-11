@@ -1,7 +1,7 @@
 import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
+import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -17,7 +17,6 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 import static org.junit.Assert.assertTrue;
 import static pageObjects.LoginPage.LOGIN_PAGE_URL;
 
-@Epic("Creating new user role")
 @Feature("Registration")
 public class RegistrationTest {
 
@@ -25,23 +24,27 @@ public class RegistrationTest {
     private UserClient userClient;
     private MainPage mainPage;
     private String accessToken;
+    private ValidatableResponse response;
 
     @Before
     public void setUp() {
         userClient = new UserClient();
         user = User.getRandom();
         mainPage = open(MainPage.MAIN_PAGE_URL, MainPage.class);
+        response = userClient.userCreate(user);
+        accessToken = response.extract().path("accessToken").toString();
     }
 
     @After
     public void tearDown() {
+
         userClient.deleteUser(accessToken, user);
     }
 
     @Test
     @DisplayName("Successful registration")
     @Description("Successful registration and check url")
-    public void positiveRegistrationTest() {
+    public void positiveRegistrationTest() throws InterruptedException {
         mainPage.clickEnterAccountButton();
 
         LoginPage loginPage = page(LoginPage.class);

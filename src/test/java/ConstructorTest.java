@@ -24,6 +24,7 @@ public class ConstructorTest {
     @DisplayName("Check buns")
     @Description("Checking click buns button and is displayed")
     public void checkChooseBunsConstructorTest() {
+        mainPage.clickMeatsChoose();
         mainPage.clickBunsChoose();
 
         assertTrue(mainPage.isDisplayedKindsBuns());
