@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.How;
+
 import static com.codeborne.selenide.Selenide.page;
 
 public class MainPage {
@@ -35,17 +36,17 @@ public class MainPage {
     @FindBy(how = How.XPATH, using = ".//span[text()='Начинки']")
     private SelenideElement meatsTab;
 
-    // виды Булок
+    // булки
     @FindBy(how = How.XPATH, using = "//*[@src='https://code.s3.yandex.net/react/code/bun-01.png']")
-    private SelenideElement kindsBuns;
+    private SelenideElement buns;
 
-    // виды Соусов
+    // соусы
     @FindBy(how = How.XPATH, using = "//*[@src='https://code.s3.yandex.net/react/code/sauce-02.png']")
-    private SelenideElement kindsSauces;
+    private SelenideElement sauces;
 
-    // виды Начинок
+    // начинки
     @FindBy(how = How.XPATH, using = "//*[@src='https://code.s3.yandex.net/react/code/meat-02.png']")
-    private SelenideElement kindsMeats;
+    private SelenideElement meats;
 
 
     @Step("Click enter button")
@@ -55,7 +56,7 @@ public class MainPage {
     }
 
     @Step("Click personal account button")
-    public LoginPage clickPersonalAccountButton () {
+    public LoginPage clickPersonalAccountButton() {
         personalAccountButton.click();
         return page(LoginPage.class);
     }
@@ -86,16 +87,16 @@ public class MainPage {
 
     @Step("Kinds buns is displayed")
     public boolean isDisplayedKindsBuns() {
-        return kindsBuns.isDisplayed();
+        return buns.isDisplayed();
     }
 
     @Step("Kinds sauces is displayed")
     public boolean isDisplayedKindsSauces() {
-        return kindsSauces.isDisplayed();
+        return sauces.isDisplayed();
     }
 
     @Step("Kinds meats is displayed")
     public boolean isDisplayedKindsMeats() {
-        return kindsMeats.isDisplayed();
+        return meats.isDisplayed();
     }
 }

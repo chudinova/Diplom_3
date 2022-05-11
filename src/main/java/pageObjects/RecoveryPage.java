@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
 import static com.codeborne.selenide.Selenide.page;
 
 public class RecoveryPage {
@@ -19,7 +20,6 @@ public class RecoveryPage {
     private SelenideElement enterButton;
 
 
-
     @Step("Click recovery button")
     public ResetPasswordPage clickRecoveryButton() {
         recoveryButton.click();
@@ -27,7 +27,7 @@ public class RecoveryPage {
     }
 
     @Step("Click enter button")
-    public LoginPage clickEnterButton () {
+    public LoginPage clickEnterButton() {
         enterButton.click();
         return page(LoginPage.class);
     }

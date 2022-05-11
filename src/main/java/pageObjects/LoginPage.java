@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
 import static com.codeborne.selenide.Selenide.page;
 
 public class LoginPage {
@@ -32,7 +33,7 @@ public class LoginPage {
 
 
     @Step("Set email")
-    public LoginPage setEmailField(String email){
+    public LoginPage setEmailField(String email) {
         emailField.setValue(email);
         return this;
     }

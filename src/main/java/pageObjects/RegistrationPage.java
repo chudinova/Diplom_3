@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
 import static com.codeborne.selenide.Selenide.page;
 
 public class RegistrationPage {
@@ -59,7 +60,7 @@ public class RegistrationPage {
     }
 
     @Step("Click register button")
-    public LoginPage clickRegisterButton () {
+    public LoginPage clickRegisterButton() {
         this.registerButton.click();
         return page(LoginPage.class);
     }
