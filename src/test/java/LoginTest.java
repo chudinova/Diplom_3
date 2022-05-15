@@ -5,16 +5,16 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pageObjects.LoginPage;
-import pageObjects.MainPage;
-import pageObjects.RecoveryPage;
-import pageObjects.RegistrationPage;
+import pageobjects.LoginPage;
+import pageobjects.MainPage;
+import pageobjects.RecoveryPage;
+import pageobjects.RegistrationPage;
 import rest.User;
 import rest.UserClient;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
-import static pageObjects.MainPage.MAIN_PAGE_URL;
+import static pageobjects.MainPage.MAIN_PAGE_URL;
 
 @Feature("Login")
 public class LoginTest {

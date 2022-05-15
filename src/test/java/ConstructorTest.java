@@ -1,14 +1,13 @@
 import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Before;
 import org.junit.Test;
-import pageObjects.MainPage;
+import pageobjects.MainPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.Assert.assertTrue;
-import static pageObjects.MainPage.MAIN_PAGE_URL;
+import static pageobjects.MainPage.MAIN_PAGE_URL;
 
 @Feature("Constructor")
 public class ConstructorTest {

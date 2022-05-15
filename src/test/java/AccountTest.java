@@ -5,17 +5,17 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pageObjects.LoginPage;
-import pageObjects.MainPage;
-import pageObjects.ProfilePage;
+import pageobjects.LoginPage;
+import pageobjects.MainPage;
+import pageobjects.ProfilePage;
 import rest.User;
 import rest.UserClient;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
-import static pageObjects.LoginPage.LOGIN_PAGE_URL;
-import static pageObjects.MainPage.MAIN_PAGE_URL;
-import static pageObjects.ProfilePage.PROFILE_PAGE_URL;
+import static pageobjects.LoginPage.LOGIN_PAGE_URL;
+import static pageobjects.MainPage.MAIN_PAGE_URL;
+import static pageobjects.ProfilePage.PROFILE_PAGE_URL;
 
 @Feature("Registration")
 public class AccountTest {

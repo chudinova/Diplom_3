@@ -1,4 +1,4 @@
-package pageObjects;
+package pageobjects;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;

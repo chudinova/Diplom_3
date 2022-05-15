@@ -6,16 +6,16 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import pageObjects.LoginPage;
-import pageObjects.MainPage;
-import pageObjects.RegistrationPage;
+import pageobjects.LoginPage;
+import pageobjects.MainPage;
+import pageobjects.RegistrationPage;
 import rest.User;
 import rest.UserClient;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static org.junit.Assert.assertTrue;
-import static pageObjects.LoginPage.LOGIN_PAGE_URL;
+import static pageobjects.LoginPage.LOGIN_PAGE_URL;
 
 @Feature("Registration")
 public class RegistrationTest {
